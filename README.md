@@ -5,10 +5,10 @@ The file **pyiot.py** requires a separate file with secrets inside. Create a fil
 
 Of course the values should be replaced with the relevant ones depending on your setup:
 
-
+**secrets.py:**
 ```
-broker_address = "127.0.0.1"<br />
-port = 12345<br />
-user = "a username here"<br />
-password = "the password here"<br />
+broker_address = "127.0.0.1"
+port = 12345
+user = "a username here"
+password = "the password here"
 ```
