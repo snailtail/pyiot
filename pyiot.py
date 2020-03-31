@@ -1,16 +1,14 @@
+# Just connect to my MQTT broker and listen for messages on a specific topic (Hallway temperature)
+
 import paho.mqtt.client as mqttClient
 import time
 import secrets
 
-# load yml file to dictionary
-
-
-# access values from dictionary
-username = secrets.user
+user = secrets.user
 broker_address = secrets.broker_address
 port = secrets.port
 password = secrets.password
- 
+
 def on_connect(client, userdata, flags, rc):
  
     if rc == 0:
@@ -44,7 +42,8 @@ while Connected != True:    #Wait for connection
     time.sleep(0.1)
  
 client.subscribe("Hallway/Temp")
- 
+
+
 try:
     while True:
         time.sleep(1)
