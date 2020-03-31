@@ -1,5 +1,18 @@
 import paho.mqtt.client as mqttClient
 import time
+
+
+# these will be filled from secret file
+import yaml
+
+# load yml file to dictionary
+secrets = yaml.load(open('./secrets.yml'))
+
+# access values from dictionary
+username = secrets['mqtt']['user']
+broker_address = secrets['mqtt']['broker_address']
+port = secrets['mqtt']['port']
+password = secrets['mqtt']['password']
  
 def on_connect(client, userdata, flags, rc):
  
